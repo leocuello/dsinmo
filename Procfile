@@ -1,0 +1,1 @@
+web: gunicorn portal21.wsgi --log-file -
