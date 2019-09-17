@@ -1,0 +1,60 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<hr>
+<div class="container">
+      <div class="row">
+
+            <div class="col-md-3">
+                <img  alt="" src="http://placehold.it/220x220" />
+            </div>
+
+            <div class="col-md-9">
+                  Calle: <strong>{{property.street}}  </strong>
+                  <br>
+                  Número:  <strong>{{property.number}}  </strong>
+                  <br>
+                  Operación:  <strong> {{property.operation}}  </strong>
+                  <br>
+                  Tipo:  <strong>{{property.type}}  </strong>
+                  <br>
+
+                  <hr>
+                  <h5>Contacto</h5>
+
+                  <form  method="POST" >   
+                     {% csrf_token %}
+                     <div class="row">
+                        <div class="col-sm-12 mb-2">
+                            <div class="select-wrap">
+                                {{ form.name.label }}
+                                {{ form.name }}
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mb-2">
+                            <div class="select-wrap">
+                                {{ form.email.label }}
+                                {{ form.email }}
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mb-2">
+                              <div class="select-wrap">
+                                  {{ form.message.label }}
+                                  {{ form.message }}
+                              </div>
+                          </div>
+                
+                        <div class="col-sm-2 col-md-2 col-lg-2 mb-4">
+                            &nbsp;
+                            <input type="submit" class="btn btn-primary btn-block form-control-same-height rounded-0" value="Enviar">
+                        </div>
+                     </div>
+                  </form>
+
+            </div>
+            
+        </div>
+</div>
+
+
+{% endblock %}

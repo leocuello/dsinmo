@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'portal21.wsgi.application'
 #    }
 #}
 
-# DATABASES = {
+#DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.postgresql',
 #        'NAME': 'portal21',
