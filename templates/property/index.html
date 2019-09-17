@@ -19,6 +19,7 @@
                 <th scope="col">Calle</th>
                 <th scope="col">Nro</th>
                 <th scope="col">Tipo</th>
+                <th scope="col">Operación</th>
                 <th scope="col"></th>
                 </tr>
             </thead>
@@ -30,6 +31,7 @@
                         <td>{{property.street}}</td>
                         <td>{{property.number}}</td>
                         <td>{{property.type.name}}</td>
+                        <td>{{property.operation.name}}</td>
                         <td><a href="/property/update/{{ property.id }}">Editar</a></td>
                     </tr>
                     {% endfor %}
